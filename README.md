@@ -1,88 +1,88 @@
 ## **Lesson 1: Install Go – Set Up Your Coding Path**
 
-**Mục tiêu:** Cài đặt Go và thiết lập môi trường phát triển để bạn có thể bắt đầu lập trình ngay.
+**Goal:** Install Go and set up your development environment so you can start coding right away.
 
 ---
 
-### **Bước 1: Tải Go**
+### **Step 1: Download Go**
 
-1. **Truy cập trang chính thức của Golang**:
+1. **Visit the official Golang website**:
    [https://go.dev/dl/](https://go.dev/dl/)
 
-2. **Chọn phiên bản phù hợp với hệ điều hành của bạn**:
+2. **Choose the version that matches your operating system**:
 
    * **Windows**: `.msi`
    * **macOS**: `.pkg`
    * **Linux**: `.tar.gz`
 
-> Ví dụ: Nếu bạn dùng Windows 64-bit, hãy tải file `.msi`.
+> Example: If you're using 64-bit Windows, download the `.msi` file.
 
 ---
 
-### **Bước 2: Cài đặt Go**
+### **Step 2: Install Go**
 
 #### **Windows**
 
-* Mở file `.msi` vừa tải.
-* Làm theo hướng dẫn để cài đặt.
-* Mặc định, Go sẽ được cài vào: `C:\Program Files\Go`
+* Open the `.msi` file you downloaded.
+* Follow the installation wizard.
+* By default, Go will be installed at: `C:\Program Files\Go`
 
 #### **macOS**
 
-* Mở file `.pkg` và cài đặt như ứng dụng thông thường.
+* Open the `.pkg` file and install it like a typical application.
 
 #### **Linux**
 
-Chạy lệnh sau (giả sử bạn tải về file `go1.22.3.linux-amd64.tar.gz`):
+Run the following commands (assuming you downloaded `go1.22.3.linux-amd64.tar.gz`):
 
 ```bash
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf go1.22.3.linux-amd64.tar.gz
 ```
 
-Thêm dòng sau vào file `~/.bashrc` hoặc `~/.zshrc`:
+Then add this line to your `~/.bashrc` or `~/.zshrc` file:
 
 ```bash
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-Sau đó chạy:
+After that, run:
 
 ```bash
-source ~/.bashrc  # hoặc ~/.zshrc
+source ~/.bashrc  # or ~/.zshrc
 ```
 
 ---
 
-### **Bước 3: Kiểm tra Go đã cài thành công chưa**
+### **Step 3: Check if Go is installed successfully**
 
-Mở Terminal (hoặc CMD) và gõ:
+Open Terminal (or Command Prompt) and type:
 
 ```bash
 go version
 ```
 
-> Nếu bạn thấy kết quả như: `go version go1.22.3 linux/amd64` thì bạn đã cài đặt thành công!
+> If you see something like `go version go1.22.3 linux/amd64`, the installation was successful!
 
 ---
 
-### **Bước 4: Thiết lập thư mục làm việc (GOPATH)**
+### **Step 4: Set Up Your Workspace (GOPATH)**
 
-* Tạo thư mục làm việc (ví dụ: `go-projects`)
-* Thêm vào file cấu hình terminal:
+* Create a working folder (e.g., `go-projects`)
+* Add the following lines to your terminal config file:
 
 ```bash
 export GOPATH=$HOME/go-projects
 export PATH=$PATH:$GOPATH/bin
 ```
 
-> Ghi chú: Từ Go 1.11 trở lên, bạn có thể dùng `go mod` và không cần cấu hình `GOPATH` nữa, nên bước này có thể bỏ qua nếu bạn dùng `go mod`.
+> Note: Since Go 1.11, you can use `go mod` for module management, so setting `GOPATH` is optional if you're using modules.
 
 ---
 
-### **Bước 5: Viết chương trình đầu tiên**
+### **Step 5: Write Your First Program**
 
-Tạo file `main.go` với nội dung:
+Create a file named `main.go` and add the following code:
 
 ```go
 package main
@@ -94,10 +94,11 @@ func main() {
 }
 ```
 
-Chạy chương trình:
+Run the program:
 
 ```bash
 go run main.go
 ```
 
-> Kết quả: `Hello, Golang!`
+> Output: `Hello, Golang!`
+
